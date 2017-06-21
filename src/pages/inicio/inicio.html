@@ -10,19 +10,154 @@
     <button ion-button menuToggle>
            <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>Inicio</ion-title>
+    <ion-title>Denticlick</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding color="danger">
-  <div class="titulosub">
-    Pendientes de hoy
-  </div>
 
 
-  <ion-card #item *ngFor="let i of registros">
+  <ion-card color="primary">
+    <ion-card-header>
+      Cita Médica 14:03-16:03 hrs
+    </ion-card-header>
+    <ion-card-content>
+      <button ion-button icon-left color="info" round small (click)="detalles()">
+              <ion-icon  name="md-help"></ion-icon> Detalles
+            </button>
+      <button ion-button icon-left round small color="warning">
+       <ion-icon  name="ios-folder-open"></ion-icon>  Reagendar
+      </button>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="http://www.clinicadentalherrera.es/blog-dentistas-torre-del-mar/wp-content/uploads/2015/09/sedacion-dental.jpg">
+      </ion-avatar>
+      <h2>Denticlick</h2>
+      <p>Junio 25 2017</p>
+    </ion-item>
+
+    <img src="http://www.clinicadentalherrera.es/blog-dentistas-torre-del-mar/wp-content/uploads/2015/09/sedacion-dental.jpg">
+
+    <ion-card-content>
+      <p>
+        Impresiones 3D para consultorios médicos
+      </p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Me gusta</div>
+      </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comentarios</div>
+      </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="http://www.clinicadentalherrera.es/blog-dentistas-torre-del-mar/wp-content/uploads/2015/09/sedacion-dental.jpg">
+      </ion-avatar>
+      <h2>Denticlick</h2>
+      <p>Junio 25 2017</p>
+    </ion-item>
+
+    <img src="http://www.clinicadentalherrera.es/blog-dentistas-torre-del-mar/wp-content/uploads/2015/09/sedacion-dental.jpg">
+
+    <ion-card-content>
+      <p>
+        Impresiones 3D para consultorios médicos
+      </p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Me gusta</div>
+      </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comentarios</div>
+      </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="http://www.clinicadentalherrera.es/blog-dentistas-torre-del-mar/wp-content/uploads/2015/09/sedacion-dental.jpg">
+      </ion-avatar>
+      <h2>Denticlick</h2>
+      <p>Junio 25 2017</p>
+    </ion-item>
+
+    <img src="http://www.clinicadentalherrera.es/blog-dentistas-torre-del-mar/wp-content/uploads/2015/09/sedacion-dental.jpg">
+
+    <ion-card-content>
+      <p>
+        Impresiones 3D para consultorios médicos
+      </p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Me gusta</div>
+      </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comentarios</div>
+      </button>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>
+          11h ago
+        </ion-note>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+
+
+
+
+
+  <!--<ion-card #item *ngFor="let i of registros">
     <ion-card-header>
       <ion-icon name="ios-folder-open"></ion-icon>  {{i.num_expediente}} {{i.estado}}
        <p>Inspección: {{i.fecha_de_inspeccion}} {{i.hora_de_inspeccion}} hrs</p>
@@ -36,13 +171,13 @@
       </button>
 
     </ion-card-content>
-  </ion-card>
+  </ion-card>-->
 
   <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
     <ion-infinite-scroll-content></ion-infinite-scroll-content>
   </ion-infinite-scroll>
-  
- 
+
+
 
 
 </ion-content>

@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,ViewController} from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { SolicitudesSevicioProvider } from '../../providers/solicitudes-sevicio/solicitudes-sevicio';
 import { LoginServicioProvider } from '../../providers/login-servicio/login-servicio';
-import { AccionSolicitudPage } from '../../pages/accion-solicitud/accion-solicitud';
 import { DetallesPage } from '../../pages/detalles/detalles';
 
 
@@ -28,19 +27,19 @@ export class InicioPage {
     public authx: LoginServicioProvider,
     private viewCtrl: ViewController) {
 
-    this.initializeItems();
-    this.idempleado = authx.currentUser.idempleado;
-    this.offset = 0;
-    this.loadPeople(this.idempleado, "");
+   // this.initializeItems();
+   // this.idempleado = authx.currentUser.idempleado;
+    //this.offset = 0;
+    //this.loadPeople(this.idempleado, "");
   }
 
   loadPeople(idEmpleado, buscar) {
-  
+
     return new Promise(resolve => {
 
       this.solicitudes.getSolicitudesInicio(idEmpleado, buscar, this.offset)
         .then(data => {
-          
+
           for (let person of data) {
             this.registros.push(person);
           }
@@ -57,11 +56,11 @@ export class InicioPage {
   doInfinite(infiniteScroll) {
 
     this.offset += 5;
-    setTimeout(() => {
+  /*  setTimeout(() => {
       this.loadPeople(this.idempleado, "").then(() => {
         infiniteScroll.complete();
       });
-    }, 500);
+    }, 500);*/
   }
 
   initializeItems(): void {
@@ -77,20 +76,31 @@ export class InicioPage {
 
   }
   ionViewDidLoad() {
-   this.viewCtrl.showBackButton(false);
+    this.viewCtrl.showBackButton(false);
   }
 
-  acciones(IDregistro,estado,idestado_empleado,pantalla,idestado_registro) {
-    this.navCtrl.push(AccionSolicitudPage, { IDregistro: IDregistro,
-      estado: estado,
-      idestado_empleado: idestado_empleado,
-      pantalla: pantalla,
-      idestado_registro:idestado_registro,
-      tipoSolicitud:0});
+
+  acciones() {
+    //this.navCtrl.push(AccionSolicitudPage);
   }
   detalles(IDregistro) {
-    this.navCtrl.push(DetallesPage, { IDregistro: IDregistro });
+    this.navCtrl.push(DetallesPage);
   }
 
- 
+
+  /* acciones(IDregistro, estado, idestado_empleado, pantalla, idestado_registro) {
+     this.navCtrl.push(AccionSolicitudPage, {
+       IDregistro: IDregistro,
+       estado: estado,
+       idestado_empleado: idestado_empleado,
+       pantalla: pantalla,
+       idestado_registro: idestado_registro,
+       tipoSolicitud: 0
+     });
+   }
+   detalles(IDregistro) {
+     this.navCtrl.push(DetallesPage, { IDregistro: IDregistro });
+   }*/
+
+
 }

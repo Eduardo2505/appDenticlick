@@ -10,28 +10,37 @@
     <button ion-button menuToggle>
            <ion-icon name="menu"></ion-icon>
       </button>
-    <ion-title>Observaciones</ion-title>
+    <ion-title>Mensaje</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <h1 class="titulo">Observaciones</h1>
-  <form>
+ 
 
-    <ion-list>
-     
-      <ion-item>
-        <ion-label>Comentario</ion-label>
-        <ion-textarea name="comentario"></ion-textarea>
-      </ion-item>
+  <ion-row>
+    <ion-col style="text-align:center">
+      <img src="http://icon-icons.com/icons2/37/PNG/128/messagemail_mensaje_3422.png">
+    </ion-col>
+  </ion-row>
+ 
+  <ion-row>
+      <h1 class="titulo">Hola! Eduardo</h1>
+    <form>
+      <ion-list>
 
-    </ion-list>
+        <ion-item>
+          <ion-label>Mensaje</ion-label>
+          <ion-textarea name="comentario"></ion-textarea>
+        </ion-item>
 
-    <button type="submit" ion-button block full icon-left>
-      <ion-icon name="send"></ion-icon> Enviar
-    </button>
-  </form>
+      </ion-list>
+
+      <button ion-button icon-left round full color="info">
+       <ion-icon  name="send"></ion-icon>  Enviar
+      </button>
+    </form>
+  </ion-row>
 
 </ion-content>

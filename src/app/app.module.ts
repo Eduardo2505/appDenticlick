@@ -16,13 +16,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { DetallesPage } from '../pages/detalles/detalles';
 import { InicioPage } from '../pages/inicio/inicio';
 import { ContactoPage } from '../pages/contacto/contacto';
-import { SolicitudesPendientesPage } from '../pages/solicitudes-pendientes/solicitudes-pendientes';
-import { SolicitudesAprobadasPage } from '../pages/solicitudes-aprobadas/solicitudes-aprobadas';
 import { AccionSolicitudPage } from '../pages/accion-solicitud/accion-solicitud';
-import { SubSolicitudesPage } from '../pages/sub-solicitudes/sub-solicitudes';
 import { AjustesPage } from '../pages/ajustes/ajustes';
 import { PerfilPage } from '../pages/perfil/perfil';
-import { AnexosPage } from '../pages/anexos/anexos';
 import { MenuDesplegablePage } from '../pages/menu-desplegable/menu-desplegable';
 
 
@@ -37,14 +33,10 @@ import { LoginPage } from '../pages/login/login';
     DetallesPage,
     InicioPage,
     ContactoPage,
-    SolicitudesPendientesPage,
     AccionSolicitudPage,
-    SubSolicitudesPage,
     AjustesPage,
     PerfilPage,
     MenuDesplegablePage,
-    AnexosPage,
-    SolicitudesAprobadasPage,
     LoginPage
   ],
   imports: [
@@ -58,15 +50,11 @@ import { LoginPage } from '../pages/login/login';
     DetallesPage,
     InicioPage,
     ContactoPage,
-    SolicitudesPendientesPage,
     AccionSolicitudPage,
-    SubSolicitudesPage,
     AjustesPage,
     PerfilPage,
     TabsPage,
     MenuDesplegablePage,
-    SolicitudesAprobadasPage,
-    AnexosPage,
     LoginPage
   ],
   providers: [

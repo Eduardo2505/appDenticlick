@@ -35,9 +35,9 @@ export class DetallesPage {
     private viewCtrl: ViewController,
     public solicitudes: SolicitudesSevicioProvider) {
     this.registro = [];
-    this.IDregistro = this.navParams.get('IDregistro');
-    this.detalles();
-    this.detallesFechas();
+    //this.IDregistro = this.navParams.get('IDregistro');
+    //this.detalles();
+    //this.detallesFechas();
   }
 
   ionViewDidLoad() {

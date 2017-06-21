@@ -1,8 +1,11 @@
 import { Component} from '@angular/core';
 
-import { SubSolicitudesPage } from '../sub-solicitudes/sub-solicitudes';
-import { MenuDesplegablePage } from '../menu-desplegable/menu-desplegable';
+
 import { InicioPage } from '../inicio/inicio';
+
+import { ContactoPage } from '../contacto/contacto';
+import { AccionSolicitudPage } from '../accion-solicitud/accion-solicitud';
+import { MenuDesplegablePage } from '../menu-desplegable/menu-desplegable';
 
 
 
@@ -13,8 +16,9 @@ import { InicioPage } from '../inicio/inicio';
 export class TabsPage {
  
   tab1Root = InicioPage;
-  tab2Root = SubSolicitudesPage;
-  tab3Root = MenuDesplegablePage;
+  tab2Root = AccionSolicitudPage;
+  tab3Root = ContactoPage;
+  tab4Root = MenuDesplegablePage;
 
   constructor() {
 

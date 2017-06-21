@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, AlertController, LoadingController, Loading } from 'ionic-angular';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { AnexosPage } from '../../pages/anexos/anexos';
-
 import { SolicitudesSevicioProvider } from '../../providers/solicitudes-sevicio/solicitudes-sevicio';
-
 import { InicioPage } from '../../pages/inicio/inicio';
-import { SolicitudesPendientesPage } from '../../pages/solicitudes-pendientes/solicitudes-pendientes';
 import { LoginServicioProvider } from '../../providers/login-servicio/login-servicio';
 /**
  * 
@@ -62,7 +58,7 @@ export class AccionSolicitudPage {
     this.estados = [];
     this.pagos = [];
     this.formPagos = [];
-    this.loadEmpleados();
+    /*this.loadEmpleados();
     this.getEstadosSolicitudes();
     if(this.tipoSolicitud==0){
     this.verificarEstadoInicial();
@@ -70,15 +66,16 @@ export class AccionSolicitudPage {
 
     this.getPagosUsuario();
 
-    this.pet = "cerrar";
+  
 
-    this.todoform = this.formBuilder.group({
+    
+*/
+  this.pet = "cerrar";
+
+this.todoform = this.formBuilder.group({
       cantidad: ['', Validators.compose([Validators.required, Validators.pattern("^[0-9]+$"), Validators.maxLength(5)])],
       descripcion: ['', Validators.maxLength(400)],
     });
-
-
-
 
     // console.log(this.IDregistro);
   }
@@ -168,7 +165,7 @@ export class AccionSolicitudPage {
 
             this.navCtrl.push(InicioPage);
           } else {
-            this.navCtrl.push(SolicitudesPendientesPage);
+          //  this.navCtrl.push(SolicitudesPendientesPage);
 
           }
         } else {
@@ -229,7 +226,7 @@ export class AccionSolicitudPage {
 
               this.navCtrl.push(InicioPage);
             } else {
-              this.navCtrl.push(SolicitudesPendientesPage);
+             // this.navCtrl.push(SolicitudesPendientesPage);
 
             }
           } else {
@@ -263,7 +260,7 @@ export class AccionSolicitudPage {
 
             this.navCtrl.push(InicioPage);
           } else {
-            this.navCtrl.push(SolicitudesPendientesPage);
+            //this.navCtrl.push(SolicitudesPendientesPage);
 
           }
         }
@@ -335,7 +332,7 @@ export class AccionSolicitudPage {
   }
 
   anexos(IDregistro, tipo) {
-    this.navCtrl.push(AnexosPage, { IDregistro: IDregistro, tipo: tipo });
+   // this.navCtrl.push(AnexosPage, { IDregistro: IDregistro, tipo: tipo });
   }
 
 
